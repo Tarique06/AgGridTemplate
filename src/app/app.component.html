@@ -1,0 +1,30 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>{{ title }}</h1>
+    <p class="subtitle">Employee Management System</p>
+  </header>
+
+  <main class="grid-container">
+    <div class="grid-wrapper">
+      <ag-grid-angular
+        class="ag-theme-alpine"
+        [columnDefs]="columnDefs"
+        [rowData]="rowData"
+        [defaultColDef]="defaultColDef"
+        [gridOptions]="gridOptions"
+        [animateRows]="true"
+        [pagination]="true"
+        [paginationPageSize]="10"
+        [rowSelection]="'single'"
+        (gridReady)="onGridReady($event)"
+        (rowSelected)="onRowSelected($event)"
+        (cellClicked)="onCellClicked($event)">
+      </ag-grid-angular>
+    </div>
+
+    <div class="grid-info">
+      <p>Total Employees: {{ rowData.length }}</p>
+      <p>Features: Sorting, Filtering, Pagination, Row Selection</p>
+    </div>
+  </main>
+</div>
