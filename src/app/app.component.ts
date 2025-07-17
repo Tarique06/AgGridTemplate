@@ -62,12 +62,7 @@ export class AppComponent implements OnInit {
     { id: 7, fullName: 'Robert Taylor', age: 37, country: 'United States', department: 'Operations' },
     { id: 8, fullName: 'Jennifer Martinez', age: 26, country: 'Spain', department: 'Marketing' },
     { id: 9, fullName: 'Christopher Lee', age: 39, country: 'Japan', department: 'Engineering' },
-    { id: 10, fullName: 'Amanda White', age: 31, country: 'Canada', department: 'Sales' },
-    { id: 11, fullName: 'Matthew Garcia', age: 34, country: 'Mexico', department: 'Finance' },
-    { id: 12, fullName: 'Jessica Rodriguez', age: 27, country: 'Brazil', department: 'Human Resources' },
-    { id: 13, fullName: 'Daniel Thompson', age: 42, country: 'Italy', department: 'Operations' },
-    { id: 14, fullName: 'Ashley Clark', age: 30, country: 'Netherlands', department: 'Marketing' },
-    { id: 15, fullName: 'James Lewis', age: 36, country: 'Sweden', department: 'Engineering' }
+    { id: 10, fullName: 'Amanda White', age: 31, country: 'Canada', department: 'Sales' }
   ];
 
   // Default column definitions
@@ -80,22 +75,17 @@ export class AppComponent implements OnInit {
   // Grid options
   gridOptions: GridOptions = {
     animateRows: true,
-    pagination: true,
-    paginationPageSize: 10,
-    rowSelection: 'single'
+    rowSelection: 'single',
+    suppressPaginationPanel: true
   };
 
   constructor() {}
 
   ngOnInit(): void {
-    // Component initialization logic can be added here
-    console.log('Employee Grid initialized with', this.rowData.length, 'records');
   }
 
   // Grid event handlers
   onGridReady(params: any): void {
-    console.log('Grid is ready');
-    // Auto-size all columns to fit content
     params.api.sizeColumnsToFit();
   }
 

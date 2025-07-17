@@ -4,7 +4,6 @@ import { AppComponent } from './app/app.component';
 import { ModuleRegistry } from '@ag-grid-community/core';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 
-// Register AG Grid modules
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 bootstrapApplication(AppComponent)

@@ -1,7 +1,6 @@
 <div class="app-container">
   <header class="app-header">
     <h1>{{ title }}</h1>
-    <p class="subtitle">Employee Management System</p>
   </header>
 
   <main class="grid-container">
@@ -20,11 +19,6 @@
         (rowSelected)="onRowSelected($event)"
         (cellClicked)="onCellClicked($event)">
       </ag-grid-angular>
-    </div>
-
-    <div class="grid-info">
-      <p>Total Employees: {{ rowData.length }}</p>
-      <p>Features: Sorting, Filtering, Pagination, Row Selection</p>
     </div>
   </main>
 </div>
