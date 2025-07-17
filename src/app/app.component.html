@@ -11,10 +11,13 @@
         [rowData]="rowData"
         [defaultColDef]="defaultColDef"
         [gridOptions]="gridOptions"
+        [sideBar]="sideBar"
         [animateRows]="true"
         [pagination]="true"
         [paginationPageSize]="10"
         [rowSelection]="'single'"
+        [pivotMode]="false"
+        [enableRangeSelection]="true"
         (gridReady)="onGridReady($event)"
         (rowSelected)="onRowSelected($event)"
         (cellClicked)="onCellClicked($event)">

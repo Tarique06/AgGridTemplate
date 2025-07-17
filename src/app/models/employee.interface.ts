@@ -4,4 +4,5 @@ export interface Employee {
   age: number;
   country: string;
   department: string;
+  salary: number;
 }
